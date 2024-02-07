@@ -1,0 +1,953 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>彩手</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, user-scalable=no,
+ initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<link rel="icon" href="caishou.ico" type="image/x-icon">
+		<link rel="shortcut icon" href="caishou.ico" type="image/x-icon">
+		<style type='text/css'>
+			body{
+				background-color: #e2dee2
+			}
+
+			#welcome, #versions, #download, #history h3, h4{
+				text-align: center
+			}
+
+			#download a{
+				line-height: 36px;
+				color: #0c1d96;
+				text-decoration:none
+			}
+
+			#download a:hover{
+				color: #009688;
+				text-decoration:underline
+			}
+
+			#history h3{
+				margin-top:72px;
+			}
+
+			#history span{
+				font:normal 16px/36px '微软雅黑';
+				text-align:left;
+			}
+
+			#history_versions_download{
+				text-align: center;
+			}
+
+			#history_versions_download a{
+				color:#0c1d96;
+				text-decoration:none;
+				line-height: 36px;
+			}
+
+			#history_versions_download a:hover{
+				color: #009688;
+				text-decoration:underline
+			}
+
+			@media (max-width:1920px){
+				#updata_content{margin-left:38%}
+			}
+
+			@media (max-width:1600px){
+				#updata_content{margin-left:36%}
+			}
+
+			@media (max-width:1440px){
+				#updata_content{margin-left:34%}
+			}
+
+			@media (max-width:1280px){
+				#updata_content{margin-left:33%}
+			}
+
+			@media (max-width:992px){
+				#updata_content{margin-left:28%}
+			}
+
+			@media (max-width:768px){
+				#updata_content{margin-left:20%}
+			}
+
+			@media (max-width:590px){
+				#updata_content{margin-left:12%}
+			}
+
+			@media (max-width:480px){
+				#updata_content{margin-left:5%}
+			}
+
+			@media (min-width: 0px) and (max-width: 480px){
+				#updata_content{margin-left:0%}
+			}
+
+			.g-demo{
+				height: 191px;
+				width: 309px;
+				overflow: hidden;
+				background: #000;
+				text-align: center;
+				margin:auto
+			}
+
+			.g-demo:before{
+				content: '';
+				display: inline-block;
+				height: 100%;
+				vertical-align: middle;
+			}
+
+			.g-container{
+				display: inline-block;
+				vertical-align: middle;
+				perspective: 4px;
+				perspective-origin: 50% 50%;
+				position: relative;
+				animation: hueRotate 21s infinite linear;
+			}
+
+			.g-group{
+				position: absolute;
+				width: 1000px;
+				height: 1000px;
+				left: -500px;
+				top: -500px;
+				transform-style: preserve-3d;
+				animation: move 12s infinite linear;
+				animation-fill-mode: forwards;
+			}
+
+			.g-group:nth-child(2){
+				animation: move 12s infinite linear;
+				animation-delay: -6s;
+			}
+
+			.item {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				background: url('./fLwuMd.jpg');
+				background-size: cover;
+				opacity: 1;
+				animation: fade 12s infinite linear;
+				animation-delay: 0;
+			}
+
+			.g-group:nth-child(2) .item {
+				animation-delay: -6s;
+			}
+
+			.item-right {
+				transform: rotateY(90deg) translateZ(500px);
+			}
+
+			.item-left {
+				transform: rotateY(-90deg) translateZ(500px);
+			}
+
+			.item-top {
+				transform: rotateX(90deg) translateZ(500px);
+			}
+
+			.item-bottom {
+				transform: rotateX(-90deg) translateZ(500px);
+			}
+
+			.item-middle {
+				transform: rotateX(180deg) translateZ(1000px);
+			}
+
+			@keyframes move {
+				0%{
+					transform: translateZ(-500px) rotate(0deg);
+				}
+				100%{
+					transform: translateZ(500px) rotate(0deg);
+				}
+			}
+
+			@keyframes fade {
+				0%{
+					opacity: 0;
+				}
+				25%,
+				60%{
+					opacity: 1;
+				}
+				100%{
+					opacity: 0;
+				}
+			}
+
+			@keyframes hueRotate {
+				0% {
+					filter: hue-rotate(0);
+				}
+				100% {
+					filter: hue-rotate(360deg);
+				}
+			}
+		</style>
+	</head>
+	<body class="body">
+		<div id="main">
+			<div id='welcome'>
+				<h1 >HELLO! WELCOME TO HERE!</h1>
+				<h2>彩手鼠标宏</h2>
+			</div>
+			<div id='versions'>
+				<h3>版本:1.47</h3>
+			</div>
+			<div id='download'>
+				<h3><a href='https://www.123pan.com/s/rX5A-RpNRh.html' target="_blank">点击下载</a></h3>
+			</div>
+			<div class="g-demo">
+				<div class="g-container">
+					<div class="g-group">
+						<div class="item item-right"></div>
+						<div class="item item-left"></div>
+						<div class="item item-top"></div>
+						<div class="item item-bottom"></div>
+						<div class="item item-middle"></div>
+					</div>
+					<div class="g-group">
+						<div class="item item-right"></div>
+						<div class="item item-left"></div>
+						<div class="item item-top"></div>
+						<div class="item item-bottom"></div>
+						<div class="item item-middle"></div>
+					</div>
+				</div>
+			</div>
+			<div id='history'>
+				<h3>QQ群（新）：928286446</h3>
+				<div id='theFix'>
+					<h4>====================================</h4>
+					<h4>旧QQ群被停用，原因暂时不清楚 2023.7.14</h4>
+					<h4>====================================</h4>
+				</div>
+				<h3>彩手独家分享</h3>
+				<div id='theFix'>
+					<h4>====================================</h4>
+					<h4>左右修正的原理</h4>
+					<div id='updata_content'>
+						<span>罗盘定位法：利用游戏中罗盘刻度跟随视角变化的规律实现</span><br />
+						<br />
+						<span>具体例子：假设开枪时，罗盘刻度是100，在短暂时间内，</span><br />
+						<span>弹道随机向右移动了一段距离，此时罗盘刻度假设是103，</span><br />
+						<span>则控制鼠标向左移动直到罗盘刻度回到100，即成功修复左右随机弹道</span><br />
+						<br />
+						<span>此方法适用于带罗盘定位的大部分FPS游戏</span><br />
+					</div>
+					<h4>====================================</h4>
+				</div>
+				<h3>版本历史</h3>
+				<div id='v1.47'>
+					<h4>====================================</h4>
+					<h4>版本号：1.47</h4>
+					<div id='history_versions_download'>
+						<a href='https://www.123pan.com/s/rX5A-RpNRh.html' target="_blank">下载该版本</a>
+					</div>
+					<div id='updata_content'>
+						<span>发布日期：2023.10.26</span><br />
+						<span>更新内容：</span><br />
+						<span>1.修复了自定义按键设置为数字键6时，会显示为不知名按键的问题</span><br />
+						<span>2.修改了运行方式以减少程序特征</span><br />
+						<span>3.优化了启动速度</span><br />
+					</div>
+				</div>
+				<div id='v1.46'>
+					<h4>====================================</h4>
+					<h4>版本号：1.46</h4>
+					<div id='history_versions_download'>
+						<a href='https://www.123pan.com/s/rX5A-mtCRh.html' target="_blank">下载该版本</a>
+					</div>
+					<div id='updata_content'>
+						<span>发布日期：2023.8.27</span><br />
+						<span>更新内容：</span><br />
+						<span>1.修改了界面左上角彩手图标为渐变色显示效果</span><br />
+						<span>2.去除了连点逻辑中控制鼠标移动到准确坐标的代码</span><br />
+					</div>
+				</div>
+				<div id='v1.45'>
+					<h4>====================================</h4>
+					<h4>版本号：1.45</h4>
+					<div id='history_versions_download'>
+						<a href='https://www.123pan.com/s/rX5A-GnCRh.html' target="_blank">下载该版本</a>
+					</div>
+					<div id='updata_content'>
+						<span>发布日期：2023.7.16</span><br />
+						<span>更新内容：</span><br />
+						<span>1.修改了配置切换音效</span><br />
+						<span>2.增加了状态栏配置文件标题的显示宽度</span><br />
+						<span>3.修改了关于页面的qq群号</span><br />
+					</div>
+				</div>
+				<div id='v1.44'>
+					<h4>====================================</h4>
+					<h4>版本号：1.44</h4>
+					<div id='history_versions_download'>
+						<a href='https://www.123pan.com/s/rX5A-9kCRh.html' target="_blank">下载该版本</a>
+					</div>
+					<div id='updata_content'>
+						<span>发布日期：2023.5.26</span><br />
+						<span>更新内容：</span><br />
+						<span>1.新增了驱动页面，可以通过调用罗技驱动进行鼠标移动了</span><br />
+					</div>
+				</div>
+				<div id='v1.43'>
+					<h4>====================================</h4>
+					<h4>版本号：1.43</h4>
+					<div id='history_versions_download'>
+						<a href='https://www.123pan.com/s/rX5A-0ACRh.html' target="_blank">下载该版本</a>
+					</div>
+					<div id='updata_content'>
+						<span>发布日期：2023.5.16</span><br />
+						<span>更新内容：</span><br />
+						<span>1.新增了随机弹道设置功能</span><br />
+					</div>
+				</div>
+				<div id='v1.42'>
+					<h4>====================================</h4>
+					<h4>版本号：1.42</h4>
+					<div id='history_versions_download'>
+						<a href='https://www.123pan.com/s/rX5A-vZWRh.html' target="_blank">下载该版本</a>
+					</div>
+					<div id='updata_content'>
+						<span>发布日期：2023.3.6</span><br />
+						<span>更新内容：</span><br />
+						<span>1.去除了绝地求生模式</span><br />
+						<span>2.新增了鼠标加速度设置功能</span><br />
+						<span>3.新增了鼠标灵敏度调节功能</span><br />
+					</div>
+				</div>
+				<div id='v1.41'>
+					<h4>====================================</h4>
+					<h4>版本号：1.41</h4>
+					<div id='history_versions_download'>
+						<a href='https://www.123pan.com/s/rX5A-DVCRh.html' target="_blank">下载修复版</a>
+					</div>
+					<div id='updata_content'>
+						<span>发布日期：2023.2.19</span><br />
+						<span>更新内容：</span><br />
+						<span>1.修复了配置切换时提示音为“已关闭”的问题</span><br />
+						<span>2.新增了自定义切换配置快捷键功能</span><br />
+						<span>3.（修复版2023.3.13）去除了单发识别，以防止识别出错导致不压枪</span><br />
+						<span>4.（修复版2023.6.14）武器配件图标位置改变后的识别更新</span><br />
+						<span>5.（修复版2023.6.14）增强一键拾取功能（PUBG增强拾取检测2023.8.3，用了会检测3天，勿用拾取功能）</span><br />
+						<span>6.（修复版2023.9.14）修复了一键拾取功能，优化了开镜识别</span><br />
+					</div>
+				</div>
+				<div id='v1.40'>
+					<h4>====================================</h4>
+					<h4>版本号：1.40</h4>
+					<div id='history_versions_download'>
+						<a href='https://www.123pan.com/s/rX5A-DWWRh' target="_blank">下载该版本</a>
+					</div>
+					<div id='updata_content'>
+						<span>发布日期：2023.1.1</span><br />
+						<span>更新内容：</span><br />
+						<span>1.恢复了一键拾取功能，打开背包后按E键（可改其他键）</span><br />
+						<span>2.优化了自动关闭鼠标加速，使弹道更稳定</span><br />
+					</div>
+				</div>
+				<div id='v1.39'>
+					<h4>====================================</h4>
+					<h4>版本号：1.39</h4>
+					<div id='history_versions_download'>
+						<a href='https://www.123pan.com/s/rX5A-dfWRh' target="_blank">下载该版本</a>
+					</div>
+					<div id='updata_content'>
+						<span>发布日期：2022.8.23</span><br />
+						<span>更新内容：</span><br />
+						<span>1.修复了窗口拖动时，CPU占用会突然变高的问题</span><br />
+						<span>2.修复了游戏中未屏息时却显示屏息，导致压枪过头的问题</span><br />
+						<span>3.修复了左右修正功能会导致狙击枪视角左右晃动的问题</span><br />
+						<span>4.修复了2560*1440分辨率下，2号位武器是机瞄时，无法修改瞄具系数的问题</span><br />
+						<span>5.取消了单发速点功能，以避免自动开枪的情况</span><br />
+						<span>6.取消了二、三连发识别，以减少识别失误的情况</span><br />
+						<span>7.修改了步枪6倍镜的瞄具系数，默认为3倍镜系数</span><br />
+						<span>8.新增了MP9冲锋枪、蓝色晶片探测器识别、O12全自动模式弹道</span><br />
+						<span>9.新增了通用模式下左右键触发宏功能</span><br />
+						<span>10.优化了简繁体自动识别，隐藏了繁体中文按钮</span><br />
+						<span>11.优化了识别逻辑，返回大厅时自动清空压枪数据</span><br />
+						<span>12.优化了压枪数据执行算法，使弹道更稳定</span><br />
+						<span>13.优化了血雾追踪算法，使拉枪更平滑</span><br />
+						<span>14.加快了启动速度</span><br />
+					</div>
+				</div>
+				<div id='v1.38'>
+					<h4>====================================</h4>
+					<h4>版本号：1.38</h4>
+					<div id='history_versions_download'>
+						<a href='https://www.123pan.com/s/rX5A-e3WRh' target="_blank">下载该版本</a>
+					</div>
+					<div id='updata_content'>
+						<span>发布日期：2022.7.8</span><br />
+						<span>更新内容：</span><br />
+						<span>1.修改了单发速点功能为长按左键触发</span><br />
+						<span>2.修改了截图逻辑，加快识别速度，降低CPU占用</span><br />
+						<span>3.优化了识别算法，提高配件识别准确率</span><br />
+						<span>4.新增了顶部状态栏多配件显示，显示格式为：武器名-倍镜-枪口-握把-枪托</span><br />
+						<span>5.新增了2560*1440分辨率识别</span><br />
+					</div>
+				</div>
+				<div id='v1.37'>
+					<h4>====================================</h4>
+					<h4>版本号：1.37</h4>
+					<div id='history_versions_download'>
+						<a href='https://www.123pan.com/s/rX5A-kdWRh' target="_blank">下载该版本</a>
+					</div>
+					<div id='updata_content'>
+						<span>发布日期：2022.6.25</span><br />
+						<span>更新内容：</span><br />
+						<span>1.修复了装信号背包时，步枪全自动会变成三连发的问题</span><br />
+						<span>2.修改了截图逻辑，以降低对CPU的占用</span><br />
+						<span>3.修改了识别逻辑，按TAB键关闭背包后，才会刷新识别数据</span><br />
+						<span>4.修改了左右修正功能的逻辑，相比之前更不会影响拉枪</span><br />
+						<span>5.修改了血雾追踪功能的逻辑，增加了强度</span><br />
+						<span>6.修改了开启宏、关闭宏、识别成功时的音效</span><br />
+						<span>7.优化了压枪数据执行逻辑，使弹道更稳定</span><br />
+						<span>8.新增了快捷键开关：F5键-左右修正功能、F6键-血雾追踪功能</span><br />
+						<span>9.新增了灵敏度可修改范围：20 到 70 之间</span><br />
+					</div>
+				</div>
+				<div id='v1.36'>
+					<h4>====================================</h4>
+					<h4>版本号：1.36</h4>
+					<div id='history_versions_download'>
+						<a href='https://www.123pan.com/s/rX5A-SvWRh' target="_blank">下载该版本</a>
+					</div>
+					<div id='updata_content'>
+						<span>发布日期：2022.6.18</span><br />
+						<span>更新内容：</span><br />
+						<span>1.修复了街机模式复活后不能压枪的问题</span><br />
+						<span>2.修复了Groza装全息和4倍镜不能识别的问题</span><br />
+						<span>3.修复了倍镜灵敏度修改后不能立即生效的问题</span><br />
+						<span>4.修改了血雾追踪功能的逻辑，范围也减小到之前的一半，使自己被打出血时尽量不拉枪</span><br />
+						<span>5.制成了单文件EXE，运行时会自动释放相关文件</span><br />
+						<span>6.新增了丢雷语音倒计时功能，按5键切雷，再按R键触发</span><br />
+					</div>
+				</div>
+				<div id='v1.35'>
+					<h4>====================================</h4>
+					<h4>版本号：1.35</h4>
+					<div id='history_versions_download'>
+						<a href='https://www.123pan.com/s/rX5A-VTWRh' target="_blank">下载该版本</a>
+					</div>
+					<div id='updata_content'>
+						<span>发布日期：2022.6.11</span><br />
+						<span>更新内容：</span><br />
+						<span>1.修复了绝地求生街机模式不能压枪的问题</span><br />
+						<span>2.优化了绝地求生开枪时的截图逻辑，当不开启左右修正和血雾追踪功能时，可以降低CPU占用至之前的一半以上</span><br />
+					</div>
+				</div>
+				<div id='v1.34'>
+					<h4>====================================</h4>
+					<h4>版本号：1.34</h4>
+					<div id='history_versions_download'>
+						<a href='https://www.123pan.com/s/rX5A-VTWRh' target="_blank">下载该版本</a>
+					</div>
+					<div id='updata_content'>
+						<span>发布日期：2022.6.6</span><br />
+						<span>更新内容：</span><br />
+						<span>1.初始化进程优先级为实时，使压枪更加稳定</span><br />
+						<span>2.优化了绝地求生左右修正逻辑，进一步降低对拉枪的影响，并加强了修正力度</span><br />
+					</div>
+				</div>
+				<div id='v1.33'>
+					<h4>====================================</h4>
+					<h4>版本号：1.33</h4>
+					<div id='history_versions_download'>
+						<a href='https://www.123pan.com/s/rX5A-ITWRh' target="_blank">下载该版本</a>
+					</div>
+					<div id='updata_content'>
+						<span>发布日期：2022.5.29</span><br />
+						<span>更新内容：</span><br />
+						<span>1.更换了宏开关音效</span><br />
+						<span>2.减小了切换配置、绝地求生识别成功时的音效音量</span><br />
+						<span>3.修复了在绝地求生中不能手动开关宏的功能，并始终开启手动关闭宏时的音效，防止误触</span><br />
+						<span>4.优化了压枪数据执行逻辑，使延时更精确</span><br />
+					</div>
+				</div>
+				<div id='v1.32'>
+					<h4>====================================</h4>
+					<h4>版本号：1.32</h4>
+					<div id='history_versions_download'>
+						<a href='https://www.123pan.com/s/rX5A-dTWRh' target="_blank">下载该版本</a>
+					</div>
+					<div id='updata_content'>
+						<span>发布日期：2022.5.27</span><br />
+						<span>更新内容：</span><br />
+						<span>1.修改了开机自启功能，在开机启动后会自动隐藏界面，按HOME键才显示</span><br />
+						<span>2.修改了初始化界面为明亮风格</span><br />
+						<span>3.加快了绝地求生SKS、MK12等狙击步枪单发速点，当只有狙击步枪可用时，可使用速点功能来对抗敌方突脸</span><br />
+					</div>
+				</div>
+				<div id='v1.31'>
+					<h4>====================================</h4>
+					<h4>版本号：1.31</h4>
+					<div id='history_versions_download'>
+						<a href='https://www.123pan.com/s/rX5A-0jsRh' target="_blank">下载该版本</a>
+					</div>
+					<div id='updata_content'>
+						<span>发布日期：2022.5.25</span><br />
+						<span>更新内容：</span><br />
+						<span>1.修复了绝地求生街机模式中，不能自动开关宏的bug</span><br />
+						<span>2.隐藏了绝地求生手动识别功能按钮</span><br />
+						<span>3.显示了绝地求生倍镜灵敏度设置</span><br />
+						<span>4.关闭了绝地求生切枪时的提示音效，只保留识别成功时的提示音效</span><br />
+						<span>5.优化了绝地求生智能识别，在按下鼠标左键时，不进行识别压枪环境，以减少cpu占用</span><br />
+						<span>6.修改了绝地求生M416的2倍镜到6倍镜压枪系数（可以自行修改，数据在pubg.ini文件，修改时需退出软件）</span><br />
+					</div>
+				</div>
+				<div id='v1.30'>
+					<h4>====================================</h4>
+					<h4>版本号：1.30</h4>
+					<div id='history_versions_download'>
+						<a href='https://www.123pan.com/s/rX5A-sjsRh' target="_blank">下载该版本</a>
+					</div>
+					<div id='updata_content'>
+						<span>发布日期：2022.5.22</span><br />
+						<span>更新说明：</span><br />
+						<span>1.优化了绝地求生左右修正功能，减少抖动，并降低档位对应的力度，默认3档的力度为1(之前1档为1)</span><br />
+						<span>2.隐藏了绝地求生快速拾取、一键拾取功能按钮</span><br />
+					</div>
+				</div>
+				<div id='v1.29'>
+					<h4>====================================</h4>
+					<h4>版本号：1.29</h4>
+					<div id='history_versions_download'>
+						<a href='https://www.123pan.com/s/rX5A-fjsRh' target="_blank">下载该版本</a>
+					</div>
+					<div id='updata_content'>
+						<span>发布日期：2022.5.16</span><br />
+						<span>更新说明：</span><br />
+						<span>1.关闭了一键拾取、快速拾取、长按背包键拾取等易被检测的功能</span><br />
+					</div>
+				</div>
+				<div id='v1.28'>
+					<h4>====================================</h4>
+					<h4>版本号：1.28</h4>
+					<div id='history_versions_download'>
+						<a href='https://www.123pan.com/s/rX5A-iVsRh' target="_blank">下载该版本</a>
+					</div>
+					<div id='updata_content'>
+						<span>发布日期：2022.5.8</span><br />
+						<span>更新说明：</span><br />
+						<span>1.修复了在绝地求生游戏中打开地图时，按下鼠标左键偶尔会出现压枪的问题</span><br />
+					</div>
+				</div>
+				<div id='v1.27'>
+					<h4>====================================</h4>
+					<h4>版本号：1.27</h4>
+					<div id='history_versions_download'>
+						<a href='https://www.123pan.com/s/rX5A-wVsRh' target="_blank">下载该版本</a>
+					</div>
+					<div id='updata_content'>
+						<span>发布日期：2022.5.2</span><br />
+						<span>更新说明：</span><br />
+						<span>1.修复了绝地求生垂直握把、步枪枪托等部分配件识别失败的问题</span><br />
+						<span>2.修复了绝地求生投掷物改键后，投掷时仍会下压的问题</span><br />
+						<span>3.优化了绝地求生左右修正逻辑，减少不必要的抖动</span><br />
+						<span>4.优化了绝地求生智能识别，切换开镜可以自动识别了（之前只能识别长按右键开镜）</span><br />
+					</div>
+				</div>
+				<div id='v1.26'>
+					<h4>====================================</h4>
+					<h4>版本号：1.26</h4>
+					<div id='history_versions_download'>
+						<a href='https://www.123pan.com/s/rX5A-5ysRh' target="_blank">下载该版本</a>
+					</div>
+					<div id='updata_content'>
+						<span>发布日期：2022.4.28</span><br />
+						<span>更新说明：</span><br />
+						<span>1.修复了绝地求生4月27日更新UI后，倍镜识别失败的问题</span><br />
+					</div>
+				</div>
+				<div id='v1.25'>
+					<h4>====================================</h4>
+					<h4>版本号：1.25</h4>
+					<div id='history_versions_download'>
+						<a href='https://www.123pan.com/s/rX5A-4ysRh' target="_blank">下载该版本</a>
+					</div>
+					<div id='updata_content'>
+						<span>发布日期：2022.4.23</span><br />
+						<span>更新说明：</span><br />
+						<span>1.隐藏了绝地求生倍镜灵敏度设置功能</span><br />
+						<span>2.优化了绝地求生压枪逻辑，使开火时不影响向上转动视角，并增强了稳定性</span><br />
+						<span>3.新增了绝地求生步枪单发连点功能，开火时按住Ctrl键</span><br />
+						<span>4.新增了绝地求生全局压枪力度、屏息、蹲下、卧倒系数调整功能</span><br />
+					</div>
+				</div>
+				<div id='v1.24'>
+					<h4>====================================</h4>
+					<h4>版本号：1.24</h4>
+					<div id='history_versions_download'>
+						<a href='https://www.123pan.com/s/rX5A-h6sRh' target="_blank">下载该版本</a>
+					</div>
+					<div id='updata_content'>
+						<span>发布日期：2022.4.16</span><br />
+						<span>更新说明：</span><br />
+						<span>1.新增了开机自启功能</span><br />
+						<span>2.新增了绝地求生新武器ACE32识别</span><br />
+						<span>3.解决了在绝地求生中，丢雷倒计时会显示下划线的问题</span><br />
+					</div>
+				</div>
+				<div id='v1.23'>
+					<h4>====================================</h4>
+					<h4>版本号：1.23</h4>
+					<div id='history_versions_download'>
+						<a href='https://www.123pan.com/s/rX5A-CqsRh' target="_blank">下载该版本</a>
+					</div>
+					<div id='updata_content'>
+						<span>发布日期：2022.4.10</span><br />
+						<span>更新说明：</span><br />
+						<span>1.修复了在绝地求生中，偶尔出现开火时瞬间拉枪到地面的问题</span><br />
+						<span>2.修复了顶部状态栏偶尔能被光标选中，导致压枪失败的问题</span><br />
+						<span>3.优化了绝地求生智能识别，即使投掷物品改键了，投掷时也能识别到，会自动停止压枪</span><br />
+						<span>4.新增了风格切换功能</span><br />
+					</div>
+				</div>
+				<div id='v1.22'>
+					<h4>====================================</h4>
+					<h4>版本号：1.22</h4>
+					<div id='history_versions_download'>
+						<a href='https://www.123pan.com/s/rX5A-L5sRh' target="_blank">下载该版本</a>
+					</div>
+					<div id='updata_content'>
+						<span>发布日期：2022.4.2</span><br />
+						<span>更新说明：</span><br />
+						<span>1.修复了在绝地求生简体中文时，左右修正功能失效的问题</span><br />
+						<span>2.修复了在绝地求生治疗物品、投掷物品、表情轮盘打开时，选择物品会被干扰的问题</span><br />
+					</div>
+				</div>
+				<div id='v1.21'>
+					<h4>====================================</h4>
+					<h4>版本号：1.21</h4>
+					<div id='history_versions_download'>
+						<a href='https://www.123pan.com/s/rX5A-F5sRh' target="_blank">下载该版本</a>
+					</div>
+					<div id='updata_content'>
+						<span>发布日期：2022.3.27</span><br />
+						<span>更新说明：</span><br />
+						<span>1.修复了1.20版本自定义段数超过22段时，配置保存会失败的bug</span><br />
+						<span>2.优化了绝地求生智能识别（1），在武器及配件没有更换时，重复识别不会加载配置、更新状态栏和发出提示音</span><br />
+						<span>3.优化了绝地求生智能识别（2），在背包中更换武器及配件会即时识别，减少按TAB键识别的操作，使体验更沉浸</span><br />
+						<span>4.加大了投掷物拉栓倒计时的字体尺寸，使提示更明显</span><br />
+						<span>5.修改了绝地求生步枪单发回正的力度，使回正更准确</span><br />
+					</div>
+				</div>
+				<div id='v1.20'>
+					<h4>====================================</h4>
+					<h4>版本号：1.20</h4>
+					<div id='history_versions_download'>
+						<a href='https://www.123pan.com/s/rX5A-Q5sRh' target="_blank">下载该版本</a>
+					</div>
+					<div id='updata_content'>
+						<span>发布日期：2022.3.26</span><br />
+						<span>更新说明：</span><br />
+						<span>1.全新UI</span><br />
+						<span>2.修改了绝地求生快速拾取功能，使不影响正常操作</span><br />
+					</div>
+				</div>
+				<div id='v1.19'>
+					<h4>====================================</h4>
+					<h4>版本号：1.19</h4>
+					<div id='history_versions_download'>
+						<a href='https://www.123pan.com/s/rX5A-bzsRh' target="_blank">下载该版本</a>
+					</div>
+					<div id='updata_content'>
+						<span>发布日期：2022.3.17</span><br />
+						<span>更新说明：</span><br />
+						<span>1.修复了功能页面一键拾取快捷键自定义功能失效的bug</span><br />
+						<span>2.新增了绝地求生全程主动识别压枪环境，自动开启、关闭宏的功能</span><br />
+						<span>3.修改了绝地求生左右修正的逻辑，弹道更集中了</span><br />
+						<span>4.修复了在绝地求生3月16日版本更新后，配件识别不了的问题</span><br />
+					</div>
+				</div>
+				<div id='v1.18'>
+					<h4>====================================</h4>
+					<h4>版本号：1.18</h4>
+					<div id='history_versions_download'>
+						<a href='https://www.123pan.com/s/rX5A-gzsRh' target="_blank">下载该版本</a>
+					</div>
+					<div id='updata_content'>
+						<span>发布日期：2022.3.15</span><br />
+						<span>更新说明：</span><br />
+						<span>1.修改了绝地求生截图逻辑，提高识别准确度</span><br />
+						<span>2.加快了绝地求生识别速度，0.03秒识别</span><br />
+						<span>3.加快了绝地求生识别完成后提示的速度</span><br />
+						<span>4.增强了绝地求生压枪稳定性，减小枪飘幅度</span><br />
+						<span>5.增强了绝地求生左右修正功能，使弹道更集中</span><br />
+					</div>
+				</div>
+				<div id='v1.17'>
+					<h4>====================================</h4>
+					<h4>版本号：1.17</h4>
+					<div id='history_versions_download'>
+						<a href='https://www.123pan.com/s/rX5A-KisRh' target="_blank">下载该版本</a>
+					</div>
+					<div id='updata_content'>
+						<span>发布日期：2022.3.10</span><br />
+						<span>更新说明：</span><br />
+						<span>1.增加了压枪平滑度（100帧，原60帧）及稳定性</span><br />
+						<span>2.解决了在绝地求生中，有时开局需要按两次背包键才能识别的问题</span><br />
+						<span>3.修改了绝地求生左右修正的逻辑，拉枪不再受影响</span><br />
+					</div>
+				</div>
+				<div id='v1.16'>
+					<h4>====================================</h4>
+					<h4>版本号：1.16</h4>
+					<div id='history_versions_download'>
+						<a href='https://www.123pan.com/s/rX5A-QisRh' target="_blank">下载该版本</a>
+					</div>
+					<div id='updata_content'>
+						<span>发布日期：2022.3.5</span><br />
+						<span>更新说明：</span><br />
+						<span>1.修复了在代码重构后，1.15版本新出现的一些bug</span><br />
+						<span>2.修复了多次切换配置后，界面操作会不流畅的问题</span><br />
+						<span>3.加快了启动速度</span><br />
+						<span>4.加快了绝地求生识别速度，0.04秒识别</span><br />
+						<span>5.优化了绝地求生左右修正、血雾追踪的性能</span><br />
+						<span>6.更新了绝地求生弹道数据，精调</span><br />
+						<span>7.新增了连点器极限点击功能，每秒可点击3000次</span><br />
+					</div>
+				</div>
+				<div id='v1.15'>
+					<h4>====================================</h4>
+					<h4>版本号：1.15</h4>
+					<div id='history_versions_download'>
+						<a href='https://www.123pan.com/s/rX5A-QtsRh' target="_blank">下载该版本</a>
+					</div>
+					<div id='updata_content'>
+						<span>发布日期：2022.2.26</span><br />
+						<span>更新说明：</span><br />
+						<span>1.重构了代码，性能提升同时，CPU和内存占用率降到之前的1/10左右</span><br />
+						<span>2.去除每次启动时的弹窗提示，将内容移至关于页面</span><br />
+					</div>
+				</div>
+				<div id='v1.14'>
+					<h4>====================================</h4>
+					<h4>版本号：1.14</h4>
+					<div id='history_versions_download'>
+						<a href='https://www.123pan.com/s/rX5A-9tsRh' target="_blank">下载该版本</a>
+					</div>
+					<div id='updata_content'>
+						<span>发布日期：2022.2.25</span><br />
+						<span>更新说明：</span><br />
+						<span>1.隐藏了部分不常用组件</span><br />
+						<span>2.减小了绝地求生血雾追踪的拉枪速度</span><br />
+						<span>3.增加了绝地求生左右修正力度、血雾追踪力度调节功能</span><br />
+						<span>4.增加了绝地求生倍镜灵敏度自定义功能</span><br />
+					</div>
+				</div>
+				<div id='v1.13'>
+					<h4>====================================</h4>
+					<h4>版本号：1.13</h4>
+					<div id='history_versions_download'>
+						<a href='https://www.123pan.com/s/rX5A-AtsRh' target="_blank">下载该版本</a>
+					</div>
+					<div id='updata_content'>
+						<span>发布日期：2022.2.22</span><br />
+						<span>更新说明：</span><br />
+						<span>1.修复了1.11和1.12版本中出现的软件退出不了的bug</span><br />
+						<span>2.修复了在绝地求生某些场景下，不能自动开关宏的bug</span><br />
+						<span>3.优化了绝地求生快速舔包、一键舔包功能，使拾取速度较之前快10倍以上</span><br />
+						<span>4.增强了绝地求生快速舔包功能的稳定性</span><br />
+						<span>5.给连点器功能增加了随机间隔时间</span><br />
+						<span>6.给绝地求生压枪功能增加了随机弹道</span><br />
+					</div>
+				</div>
+				<div id='v1.12'>
+					<h4>====================================</h4>
+					<h4>版本号：1.12</h4>
+					<div id='history_versions_download'>
+						<a href='https://www.123pan.com/s/rX5A-6csRh' target="_blank">下载该版本</a>
+					</div>
+					<div id='updata_content'>
+						<span>发布日期：2022.2.20</span><br />
+						<span>更新说明：</span><br />
+						<span>1.针对绝地求生步枪消焰器、补偿器、半截式握把垂直后坐力的修改，更新了对应的弹道数据</span><br />
+					</div>
+				</div>
+				<div id='v1.11'>
+					<h4>====================================</h4>
+					<h4>版本号：1.11</h4>
+					<div id='history_versions_download'>
+						<a href='https://www.123pan.com/s/rX5A-ScsRh' target="_blank">下载该版本</a>
+						&nbsp;&nbsp;&nbsp;
+						<a href='https://www.123pan.com/s/rX5A-jtsRh' target="_blank">修复版</a>
+					</div>
+					<div id='updata_content'>
+						<span>发布日期：2022.2.19</span><br />
+						<span>更新说明：</span><br />
+						<span>1.修复了绝地求生因切枪导致卡顿的bug</span><br />
+						<span>2.增加了绝地求生结算页面、举报页面识别后停止压枪功能</span><br />
+						<span>3.增加了错误日志记录功能</span><br />
+					</div>
+				</div>
+				<div id='v1.10'>
+					<h4>====================================</h4>
+					<h4>版本号：1.10</h4>
+					<div id='history_versions_download'>
+						<a href='https://www.123pan.com/s/rX5A-BcsRh' target="_blank">下载该版本</a>
+					</div>
+					<div id='updata_content'>
+						<span>发布日期：2022.2.17</span><br />
+						<span>更新说明：</span><br />
+						<span>1.修复了因切换配置过快导致数据错乱的bug</span><br />
+						<span>2.减小了绝地求生武器识别音效的音量</span><br />
+						<span>3.增加了绝地求生长按背包键自动舔包功能</span><br />
+						<span>4.优化了绝地求生识别功能，0.05秒识别武器，速度3倍于之前</span><br />
+					</div>
+				</div>
+				<div id='v1.09'>
+					<h4>====================================</h4>
+					<h4>版本号：1.09</h4>
+					<div id='history_versions_download'>
+						<a href='https://www.123pan.com/s/rX5A-mcsRh' target="_blank">下载该版本</a>
+					</div>
+					<div id='updata_content'>
+						<span>发布日期：2022.2.15</span><br />
+						<span>更新说明：</span><br />
+						<span>1.优化了绝地求生血雾追踪功能</span><br />
+						<span>2.增加了绝地求生打开背包自动识别功能</span><br />
+					</div>
+				</div>
+				<div id='v1.08'>
+					<h4>====================================</h4>
+					<h4>版本号：1.08</h4>
+					<div id='history_versions_download'>
+						<a href='https://www.123pan.com/s/rX5A-zZsRh' target="_blank">下载该版本</a>
+					</div>
+					<div id='updata_content'>
+						<span>发布日期：2022.2.12</span><br />
+						<span>更新说明：</span><br />
+						<span>1.减小了音效音量，减少了音效触发，增加了音效开关</span><br />
+						<span>2.修复了在绝地求生部分场景下，不能自动关闭宏的bug</span><br />
+						<span>3.加快了绝地求生自动识别的速度</span><br />
+						<span>4.优化了绝地求生血雾追踪功能</span><br />
+						<span>5.增强了绝地求生左右修正功能</span><br />
+						<span>6.增加了连点器功能</span><br />
+					</div>
+				</div>
+				<div id='v1.07'>
+					<h4>====================================</h4>
+					<h4>版本号：1.07</h4>
+					<div id='history_versions_download'>
+						<a href='https://www.123pan.com/s/rX5A-1ZsRh' target="_blank">下载该版本</a>
+					</div>
+					<div id='updata_content'>
+						<span>发布日期：2022.2.8</span><br />
+						<span>更新说明：</span><br />
+						<span>1.增加了宏开关音效</span><br />
+						<span>2.增加了绝地求生识别完毕音效</span><br />
+						<span>3.修复了绝地求生左右修正功能</span><br />
+						<span>4.增强了绝地求生血雾追踪功能</span><br />
+					</div>
+				</div>
+				<div id='v1.06'>
+					<h4>====================================</h4>
+					<h4>版本号：1.06</h4>
+					<div id='history_versions_download'>
+						<a href='https://www.123pan.com/s/rX5A-kZsRh' target="_blank">下载该版本</a>
+					</div>
+					<div id='updata_content'>
+						<span>发布日期：2022.2.6</span><br />
+						<span>更新说明：</span><br />
+						<span>1.修复了快捷键卡顿bug</span><br />
+						<span>2.优化了绝地求生左右修正功能</span><br />
+						<span>3.优化了绝地求生默认射击、腰射时的压枪逻辑</span><br />
+						<span>4.优化了绝地求生Beryl M762的压枪逻辑</span><br />
+						<span>5.增加了绝地求生繁体中文识别功能</span><br />
+						<span>6.增加了绝地求生血雾追踪功能</span><br />
+					</div>
+				</div>
+				<div id='v1.05'>
+					<h4>====================================</h4>
+					<h4>版本号：1.05</h4>
+					<div id='history_versions_download'>
+						<a href='https://www.123pan.com/s/rX5A-3ZsRh' target="_blank">下载该版本</a>
+					</div>
+					<div id='updata_content'>
+						<span>发布日期：2022.2.4</span><br />
+						<span>更新说明：</span><br />
+						<span>1.优化了快速舔包、一键舔包的速度</span><br />
+						<span>2.增加了绝地求生左右修正功能</span><br />
+					</div>
+				</div>
+				<div id='v1.04'>
+					<h4>====================================</h4>
+					<h4>版本号：1.04</h4>
+					<div id='history_versions_download'>
+						<a href='https://www.123pan.com/s/rX5A-TZsRh' target="_blank">下载该版本</a>
+					</div>
+					<div id='updata_content'>
+						<span>发布日期：2022.2.2</span><br />
+						<span>更新说明：</span><br />
+						<span>1.修复了在某些情况下，软件会出现卡死的bug</span><br />
+						<span>2.解决了在某些情况下，绝地求生配件识别失败的问题</span><br />
+					</div>
+				</div>
+				<div id='v1.03'>
+					<h4>====================================</h4>
+					<h4>版本号：1.03</h4>
+					<div id='history_versions_download'>
+						<a href='https://www.123pan.com/s/rX5A-VbsRh' target="_blank">下载该版本</a>
+					</div>
+					<div id='updata_content'>
+						<span>发布日期：2022.1.31</span><br />
+						<span>更新说明：</span><br />
+						<span>1.增加绝地求生一键舔包功能</span><br />
+						<span>2.修改了部分提示的内容</span><br />
+						<span>3.修复了在绝地求生部分场景下不能自动停止压枪的bug</span><br />
+					</div>
+				</div>
+				<div id='v1.02'>
+					<h4>====================================</h4>
+					<h4>版本号：1.02</h4>
+					<div id='history_versions_download'>
+						<a href='https://www.123pan.com/s/rX5A-KbsRh' target="_blank">下载该版本</a>
+					</div>
+					<div id='updata_content'>
+						<span>发布日期：2022.1.30</span><br />
+						<span>更新说明：</span><br />
+						<span>1.增加绝地求生快速舔包功能</span><br />
+						<span>2.修复状态栏毫秒数有时显示超长数字的bug</span><br />
+					</div>
+				</div>
+				<div id='v1.01'>
+					<h4>====================================</h4>
+					<h4>版本号：1.01</h4>
+					<div id='history_versions_download'>
+						<a href='https://www.123pan.com/s/rX5A-DbsRh' target="_blank">下载该版本</a>
+					</div>
+					<div id='updata_content'>
+						<span>发布日期：2022.1.29</span><br />
+						<span>更新说明：</span><br />
+						<span>1.优化在绝地求生团队竞技时，自动识别是否压枪环境</span><br />
+					</div>
+				</div>
+				<div id='v1.0'>
+					<h4>====================================</h4>
+					<h4>版本号：1.0</h4>
+					<div id='history_versions_download'>
+						<a href='https://www.123pan.com/s/rX5A-sbsRh' target="_blank">下载该版本</a>
+					</div>
+					<div id='updata_content'>
+						<span>发布日期：2022.1.27</span><br />
+						<span>更新说明：</span><br />
+						<span>1.首次发布</span><br />
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html> 
